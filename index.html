@@ -1,0 +1,1393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head id="head">
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<script src="//studio.sketchpad.cc/static/js/shCore.js?1"></script>
+<script src="//studio.sketchpad.cc/static/js/shBrushProcessing.js?1"></script>
+<link href='//fonts.googleapis.com/css?family=Roboto+Mono' rel='stylesheet' type='text/css'>
+<link href="//studio.sketchpad.cc/static/css/shCoreDefault.css?1" rel="stylesheet" type="text/css" />
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<title>sketchpad</title>
+</head>
+<body id="body" style="background-color:#FFFFFF;"><div id="display_error"></div><div id="canvas-wrapper"><script type="text/processing" data-processing-target="targetcanvas">size(600,600);
+
+var pipe1 = function(x,y,col){
+    fill(col);
+    if(col==="no"){
+        noFill();
+    }
+    noStroke();
+    rect(x,y,200,200);
+    fill(200);
+    stroke(0);
+    strokeWeight(1.5);
+    beginShape();
+    vertex(x+75,y+25);
+    vertex(x+125,y+25);
+    vertex(x+125,y+75);
+    vertex(x+175,y+75);
+    vertex(x+175,y+125);
+    vertex(x+75,y+125);
+    vertex(x+75,y+25);
+    endShape();
+    strokeCap(ROUND);
+    strokeWeight(2.5);
+    rect(x+62.5,y,75,25);
+    rect(x+175,y+62.5,25,75);
+};
+var pipe2 = function(x,y,col){
+    pushMatrix();
+    translate(x+200,y);
+    rotate(PI/2);
+    fill(col);
+    if(col==="no"){
+        noFill();
+    }
+    noStroke();
+    rect(0,0,200,200);
+    fill(200);
+    stroke(0);
+    strokeWeight(1.5);
+    beginShape();
+    vertex(75,25);
+    vertex(125,25);
+    vertex(125,75);
+    vertex(175,75);
+    vertex(175,125);
+    vertex(75,125);
+    vertex(75,25);
+    endShape();
+    strokeCap(ROUND);
+    strokeWeight(2.5);
+    rect(62.5,0,75,25);
+    rect(175,62.5,25,75);
+    popMatrix();
+};
+var pipe3 = function(x,y,col){
+    pushMatrix();
+    translate(x+200,y+200);
+    rotate(PI);
+    fill(col);
+    if(col==="no"){
+        noFill();
+    }
+    noStroke();
+    rect(0,0,200,200);
+    fill(200);
+    stroke(0);
+    strokeWeight(1.5);
+    beginShape();
+    vertex(75,25);
+    vertex(125,25);
+    vertex(125,75);
+    vertex(175,75);
+    vertex(175,125);
+    vertex(75,125);
+    vertex(75,25);
+    endShape();
+    strokeCap(ROUND);
+    strokeWeight(2.5);
+    rect(62.5,0,75,25);
+    rect(175,62.5,25,75);
+    popMatrix();
+};
+var pipe4 = function(x,y,col){
+    pushMatrix();
+    translate(x,y+200);
+    rotate(-PI/2);
+    fill(col);
+    if(col==="no"){
+        noFill();
+    }
+    noStroke();
+    rect(0,0,200,200);
+    fill(200);
+    stroke(0);
+    strokeWeight(1.5);
+    beginShape();
+    vertex(75,25);
+    vertex(125,25);
+    vertex(125,75);
+    vertex(175,75);
+    vertex(175,125);
+    vertex(75,125);
+    vertex(75,25);
+    endShape();
+    strokeCap(ROUND);
+    strokeWeight(2.5);
+    rect(62.5,0,75,25);
+    rect(175,62.5,25,75);
+    popMatrix();
+};
+var pipe5 = function(x,y,col){
+    pushMatrix();
+    translate(x,y);
+    fill(col);
+    if(col==="no"){
+        noFill();
+    }
+    noStroke();
+    rect(0,0,200,200);
+    fill(200);
+    stroke(0);
+    strokeWeight(1.5);
+    beginShape();
+    vertex(125,0);
+    vertex(75,0);
+    vertex(75,200);
+    vertex(125,200);
+    vertex(125,125);
+    vertex(200,125);
+    vertex(200,75);
+    vertex(125,75);
+    vertex(125,0);
+    endShape();
+    strokeCap(ROUND);
+    strokeWeight(2.5);
+    rect(175,62.5,25,75);
+    rect(62.5,0,75,25);
+    rect(62.5,175,75,25);
+    popMatrix();
+};
+var pipe6 = function(x,y,col){
+    pushMatrix();
+    translate(x+200,y);
+    rotate(PI/2);
+    fill(col);
+    if(col==="no"){
+        noFill();
+    }
+    noStroke();
+    rect(0,0,200,200);
+    fill(200);
+    stroke(0);
+    strokeWeight(1.5);
+    beginShape();
+    vertex(125,0);
+    vertex(75,0);
+    vertex(75,200);
+    vertex(125,200);
+    vertex(125,125);
+    vertex(200,125);
+    vertex(200,75);
+    vertex(125,75);
+    vertex(125,0);
+    endShape();
+    strokeCap(ROUND);
+    strokeWeight(2.5);
+    rect(175,62.5,25,75);
+    rect(62.5,0,75,25);
+    rect(62.5,175,75,25);
+    popMatrix();
+};
+var pipe7 = function(x,y,col){
+    pushMatrix();
+    translate(x+200,y+200);
+    rotate(PI);
+    fill(col);
+    if(col==="no"){
+        noFill();
+    }
+    noStroke();
+    rect(0,0,200,200);
+    fill(200);
+    stroke(0);
+    strokeWeight(1.5);
+    beginShape();
+    vertex(125,0);
+    vertex(75,0);
+    vertex(75,200);
+    vertex(125,200);
+    vertex(125,125);
+    vertex(200,125);
+    vertex(200,75);
+    vertex(125,75);
+    vertex(125,0);
+    endShape();
+    strokeCap(ROUND);
+    strokeWeight(2.5);
+    rect(175,62.5,25,75);
+    rect(62.5,0,75,25);
+    rect(62.5,175,75,25);
+    popMatrix();
+};
+var pipe8 = function(x,y,col){
+    pushMatrix();
+    translate(x,y+200);
+    rotate(-PI/2);
+    fill(col);
+    if(col==="no"){
+        noFill();
+    }
+    noStroke();
+    rect(0,0,200,200);
+    fill(200);
+    stroke(0);
+    strokeWeight(1.5);
+    beginShape();
+    vertex(125,0);
+    vertex(75,0);
+    vertex(75,200);
+    vertex(125,200);
+    vertex(125,125);
+    vertex(200,125);
+    vertex(200,75);
+    vertex(125,75);
+    vertex(125,0);
+    endShape();
+    strokeCap(ROUND);
+    strokeWeight(2.5);
+    rect(175,62.5,25,75);
+    rect(62.5,0,75,25);
+    rect(62.5,175,75,25);
+    popMatrix();
+};
+var pipe9 = function(x,y,col){
+    pushMatrix();
+    translate(x,y);
+    fill(col);
+    if(col==="no"){
+        noFill();
+    }
+    noStroke();
+    rect(0,0,200,200);
+    fill(200);
+    stroke(0);
+    strokeWeight(1.5);
+    beginShape();
+    vertex(125,0);
+    vertex(75,0);
+    vertex(75,75);
+    vertex(0,75);
+    vertex(0,125);
+    vertex(75,125);
+    vertex(75,200);
+    vertex(125,200);
+    vertex(125,125);
+    vertex(200,125);
+    vertex(200,75);
+    vertex(125,75);
+    vertex(125,0);
+    endShape();
+    strokeCap(ROUND);
+    strokeWeight(2.5);
+    rect(175,62.5,25,75);
+    rect(0,62.5,25,75);
+    rect(62.5,0,75,25);
+    rect(62.5,175,75,25);
+    popMatrix();
+};
+var pipe10 = function(x,y,col){
+    fill(col);
+    if(col==="no"){
+        noFill();
+    }
+    noStroke();
+    rect(x,y,200,200);
+    fill(200);
+    stroke(0);
+    strokeWeight(1.5);
+    rect(x+75,y,50,200);
+    strokeCap(ROUND);
+    strokeWeight(2.5);
+    rect(x+62.5,y,75,25);
+    rect(x+62.5,y+175,75,25);
+};
+var pipe11 = function(x,y,col){
+    fill(col);
+    if(col==="no"){
+        noFill();
+    }
+    noStroke();
+    rect(x,y,200,200);
+    fill(200);
+    stroke(0);
+    strokeWeight(1.5);
+    rect(x,y+75,200,50);
+    strokeCap(ROUND);
+    strokeWeight(2.5);
+    rect(x,y+62.5,25,75);
+    rect(x+175,y+62.5,25,75);
+};
+/**
+Pipes:
+1:+
+2:+
+3:+
+4:+
+5:¦
+6:-
+7:¦
+8:-
+9:+
+10:||
+11:=
+*/
+//Levs
+
+var lvl=0;
+var levs=[
+    [pipe6,pipe8,pipe2,pipe7,pipe9,pipe6,pipe4,pipe5,pipe7],
+    [pipe2,pipe10,pipe4,pipe3,pipe11,pipe3,pipe1,pipe10,pipe10],
+    [pipe11,pipe4,pipe2,pipe10,pipe11,pipe11,pipe3,pipe4,pipe3],      [pipe6,pipe6,pipe4,pipe11,pipe3,pipe5,pipe2,pipe10,pipe6],
+    [pipe7,pipe10,pipe2,pipe5,pipe1,pipe11,pipe2,pipe7,pipe6],
+    [pipe8,pipe5,pipe2,pipe11,pipe11,pipe11,pipe3,pipe6,pipe5],
+    ];
+var sols = [
+    [pipe5,pipe6,pipe3,pipe5,pipe9,pipe7,pipe1,pipe8,pipe8],
+    [pipe1,pipe11,pipe3,pipe2,pipe11,pipe4,pipe1,pipe11,pipe11],
+    [pipe10,pipe2,pipe3,pipe10,pipe10,pipe10,pipe1,pipe4,pipe1],      [pipe5,pipe6,pipe3,pipe10,pipe1,pipe7,pipe1,pipe11,pipe8],
+    [pipe5,pipe11,pipe3,pipe5,pipe3,pipe10,pipe1,pipe8,pipe8],
+    [pipe5,pipe6,pipe3,pipe10,pipe10,pipe10,pipe1,pipe8,pipe8],       ];
+var rot90=function(lev,pipe){
+        if(levs[lev][pipe]===pipe1){
+            levs[lev][pipe]=pipe2;
+        }
+        else if(levs[lev][pipe]===pipe2){
+            levs[lev][pipe]=pipe3;
+        }
+        else if(levs[lev][pipe]===pipe3){
+            levs[lev][pipe]=pipe4;
+        }
+        else if(levs[lev][pipe]===pipe4){
+            levs[lev][pipe]=pipe1;
+        }
+        else if(levs[lev][pipe]===pipe5){
+            levs[lev][pipe]=pipe6;
+        }
+        else if(levs[lev][pipe]===pipe6){
+            levs[lev][pipe]=pipe7;
+        }
+        else if(levs[lev][pipe]===pipe7){
+            levs[lev][pipe]=pipe8;
+        }
+        else if(levs[lev][pipe]===pipe8){
+            levs[lev][pipe]=pipe5;
+        }
+        else if(levs[lev][pipe]===pipe10){
+            levs[lev][pipe]=pipe11;
+        }
+        else if(levs[lev][pipe]===pipe11){
+            levs[lev][pipe]=pipe10;
+       }
+    };
+//variably stuff
+{
+var games = 0;
+var hi = 0;
+var clicks=0; 
+var tim=0;
+var c1=[0,0];
+var c2=[200,0];
+var c3=[400,0];
+var c4=[0,200];
+var c5=[200,200];
+var c6=[400,200];
+var c7=[0,400];
+var c8=[200,400];
+var c9=[400,400];
+var m=[c1,c2,c3,c4,c5,c6,c7,c8,c9];
+var cols=[color(0,157,255),color(0,157,255),color(0,157,255),color(0,157,255),color(0,157,255),color(0,157,255),color(0,157,255),color(0,157,255),color(0,157,255)];
+var won = false;
+var active = false;
+var h = 0;
+var tut = false;
+var clik=true;
+}
+
+draw = function(){
+    textFont(createFont("calibri"));
+    mouseClicked=function(){
+        if(active&&clik&&!won){
+            clicks++;
+        }
+        
+        if(won&&mouseX>230&&mouseX<370&&mouseY>290&&mouseY<300){
+            lvl=0;
+            clicks=0;
+            active=true;
+            won=false;
+            levs=[
+    [pipe6,pipe8,pipe2,pipe7,pipe9,pipe6,pipe4,pipe5,pipe7],
+    [pipe2,pipe10,pipe4,pipe3,pipe11,pipe3,pipe1,pipe10,pipe10],
+    [pipe11,pipe4,pipe2,pipe10,pipe11,pipe11,pipe3,pipe4,pipe3],      [pipe6,pipe6,pipe4,pipe11,pipe3,pipe5,pipe2,pipe10,pipe6],
+    [pipe7,pipe10,pipe2,pipe5,pipe1,pipe11,pipe2,pipe7,pipe6],
+    [pipe8,pipe5,pipe2,pipe11,pipe11,pipe11,pipe3,pipe6,pipe5],
+    ];
+        }
+        if(!active&&!tut&&h>600&&mouseX>250&&mouseX<350&&mouseY>400&&mouseY<460){
+            tut=true;
+        }
+        if(tut&&!active&&mouseX>250&&mouseX<350&&mouseY>300&&mouseY<350){
+            active=true;
+        }
+        if(clik&&active&&mouseX>0&&mouseX<200&&mouseY>0&&mouseY<200){
+            rot90(lvl,0);
+            
+        }
+        if(clik&&active&&mouseX>200&&mouseX<400&&mouseY>0&&mouseY<200){
+            rot90(lvl,1);
+            
+        }
+        if(clik&&active&&mouseX>400&&mouseX<600&&mouseY>0&&mouseY<200){
+            rot90(lvl,2);
+            
+        }
+        if(clik&&active&&mouseX>0&&mouseX<200&&mouseY>200&&mouseY<400){
+            rot90(lvl,3);
+            
+        }
+        if(clik&&active&&mouseX>200&&mouseX<400&&mouseY>200&&mouseY<400){
+            rot90(lvl,4);
+            
+        }
+        if(clik&&active&&mouseX>400&&mouseX<600&&mouseY>200&&mouseY<400){
+            rot90(lvl,5);
+            
+        }
+        if(clik&&active&&mouseX>0&&mouseX<200&&mouseY>400&&mouseY<600){
+            rot90(lvl,6);
+            
+        }
+        if(clik&&active&&mouseX>200&&mouseX<400&&mouseY>400&&mouseY<600){
+            rot90(lvl,7);
+            
+        }
+        if(clik&&active&&mouseX>400&&mouseX<600&&mouseY>400&&mouseY<600){
+            rot90(lvl,8);
+            
+        }
+        
+    };
+    if(won===false){
+        
+        for(var i = 0; i<9; i++){
+            levs[lvl][i](m[i][0],m[i][1],cols[i]);
+            fill(255);
+            textSize(30);
+            text("Clicks:" + clicks,500,575);
+        }
+        if(!active){
+            if(!tut){
+            for(var i = 0; i<600;i+=10){
+                noStroke();
+                fill(150,i/2,i);
+                rect(0,i,600,10);
+            }
+            pipe2(100,100,"no");
+            pipe11(300,100,"no");
+            pipe11(500,100,"no");
+            noStroke();
+            fill(0,157,255);
+            rect(175,301,50,h+25);
+            h++;
+            stroke(0);
+            var e=random(175,225);
+            var d = random(325,300+h);
+            var di = random(25,300+h-d);
+            line(e,d,e,d+di);
+            if(h>300){
+                var pip=['P','I','P','E','S'];
+                textSize(100);
+                for(var i = 0; i<5; i++){
+                    fill(255-255/5*i);
+                    if(h>300+50*i){
+                    text(pip[i],120*i+34,150);
+                    }
+                d=random(300,600);
+                di=random(25,100);
+                line(e,d,e,d+di);
+            }
+                if(h>600){
+                    for(var i = 0; i<100;i++){
+                        if(mouseX>250&&mouseX<350&&mouseY>400&&mouseY<460){
+                            stroke(2.55*i);
+                            fill(2.55*i);
+                        }
+                        else{
+                            stroke(255-2.55*i);
+                            fill(255-2.55*i);
+                        }
+                        
+                        line(250+i,400,250+i,450);
+                        
+                    }
+                    
+                    textSize(20);
+                    fill(0);
+                    text("P",270,430);
+                    fill(255/3);
+                    text("L",285,430);
+                    fill(255/1.5);
+                    text("A",300,430);
+                    fill(255);
+                    text("Y",315,430);
+                    if(mouseX>250&&mouseX<350&&mouseY>400&&mouseY<450){
+                    fill(255);
+                    text("P",270,430);
+                    fill(255/1.5);
+                    text("L",285,430);
+                    fill(255/3);
+                    text("A",300,430);
+                    fill(0);
+                    text("Y",315,430);
+                    }
+                }
+            }
+            }
+            else if(tut){
+                var howto=["H","O","W"," ","T","O"," ","P","L","A","Y"];
+                for(var i = 600; i>=0; i-=10){
+                    noStroke();
+                    fill(i/3,0,i);
+                    rect(0,i,600,10);
+                }
+                for(var i = 0; i<11;i++){
+                    fill(255-30*i,20*i, 150);
+                    textSize(100);
+                    text(howto[i],i*600/11,100);
+                }
+                fill(255);
+                textSize(25);
+                text("Click on a pipe to rotate it. Your goal is to make a closed path for water to flow through, starting from above the  top left to right of the bottom right.",100,175,400,400);
+                for(var i = 0; i<3; i++){
+                    for(var j = 0; j<3; j++){
+                        noFill();
+                        stroke(50*i,50*j,100);
+                        rect(255+30*i,400+30*j,30,30);
+                    }
+                }
+                rect(260,375,20,25);
+                rect(345,465,25,20);
+                line(270,385,270,395);
+                line(270,395,265,390);
+                line(270,395,275,390);
+                line(350,475,360,475);
+                line(355,480,360,475);
+                line(355,470,360,475);
+                strokeWeight(2.5);
+                stroke(0,250/1.4-100,200);
+                line(250,300,250,350);
+                var start = ['S','t','a','r','t'];
+                for(var i = 250; i<350;i++){
+                        stroke(0,i/1.4-100,200);
+                    
+                    ellipse(i,300,2.5,2.5);
+                    ellipse(i,350,2.5,2.5);
+                    line(350,300,350,350);
+                }
+                for(var i = 0; i<5; i++){
+                    fill(50,i*100-130,200);
+                    text(start[i],260+17.5*i,325);
+                }
+                
+                if(tut&&!active&&mouseX>250&&mouseX<350&&mouseY>300&&mouseY<350){
+                    for(var i = 250; i<350;i++){
+                    stroke(0,i/1.4-100,200);
+                    line(i,300,i,350);
+                }
+                }
+            }
+        }
+        for(var i = 0; i<9; i++){
+            cols[i]=color(0,157,255);
+        }
+        if(clik&&mouseX>0&&mouseX<200&&mouseY>0&&mouseY<200){
+            cols[0]=color(0,207,255);
+            
+        }
+        else if(clik&&mouseX>200&&mouseX<400&&mouseY>0&&mouseY<200){
+            cols[1]=color(0,207,255);
+            
+        }
+        else if(clik&&mouseX>400&&mouseX<600&&mouseY>0&&mouseY<200){
+            cols[2]=color(0,207,255);
+            
+        }
+        else if(clik&&mouseX>0&&mouseX<200&&mouseY>200&&mouseY<400){
+            cols[3]=color(0,207,255);
+            
+        }
+        else if(clik&&mouseX>200&&mouseX<400&&mouseY>200&&mouseY<400){
+            cols[4]=color(0,207,255);
+            
+        }
+        else if(clik&&mouseX>400&&mouseX<600&&mouseY>200&&mouseY<400){
+            cols[5]=color(0,207,255);
+            
+        }
+        else if(clik&&mouseX>0&&mouseX<200&&mouseY>400&&mouseY<600){
+            cols[6]=color(0,207,255);
+            
+        }
+        else if(clik&&mouseX>200&&mouseX<400&&mouseY>400&&mouseY<600){
+            cols[7]=color(0,207,255);
+            
+        }
+        else if(clik&&mouseX>400&&mouseX<600&&mouseY>400&&mouseY<600){
+            cols[8]=color(0,207,255);
+            
+        }
+        
+        
+        
+        {
+            if(levs[lvl][0]===sols[lvl][0]&&levs[lvl][1]===sols[lvl][1]&&levs[lvl][2]===sols[lvl][2]&&levs[lvl][3]===sols[lvl][3]&&levs[lvl][4]===sols[lvl][4]&&levs[lvl][5]===sols[lvl][5]&&levs[lvl][6]===sols[lvl][6]&&levs[lvl][7]===sols[lvl][7]&&levs[lvl][8]===sols[lvl][8]){
+            tim++;
+            clik=false;
+        }
+        }
+        if(tim>50){
+            tim=0;
+            clik=true;
+            lvl++;
+        }
+        if(lvl===levs.length){
+            won=true;
+        }
+    }
+    else if(won===true){
+        if(games===0){
+            hi=clicks;
+            games++;
+        }
+        else if(games>0){
+            if(clicks<hi){
+                hi=clicks;
+                
+            }
+        }
+        var end=["Y","o","u",""," W"," i","n","!"];
+        for(var i = 0; i<9; i++){
+            levs[lvl-1][i](m[i][0],m[i][1],color(0,157,255));
+        }
+        for(var i = 600; i>=0;i-=10){
+                noStroke();
+                fill(255-150,255-i/2,255-i,230);
+                rect(0,i,600,10);
+        }
+        textSize(20);
+        fill(0,255,255);
+        if(won&&mouseX>230&&mouseX<370&&mouseY>290&&mouseY<300){
+            fill(0,200,200);
+        }
+        text("Click to play again",300,300);
+        fill(0,255,255);
+        text("Clicks: "+clicks+"\nHiscore: "+hi, 300,250);
+        textSize(150);
+        
+        textAlign(CENTER);
+        for(var i = 0; i < 8; i++){
+            
+            fill(255/8*i, 255-255/8*i, 200);
+            text(end[i],75*i+50,150);
+        }
+    }
+    
+};
+
+</script><canvas id="targetcanvas"></canvas><BR></div><div id="divider"><A HREF="/sp/pad/iframe/ro.98jAzOITC8$XC/rev.10">&gt; show canvas only &lt;</A></div><pre id='source' name='code' class='brush: processing;'>
+
+
+/* built with Studio Sketchpad: 
+ *   http://sketchpad.cc
+ * 
+ * observe the evolution of this sketch: 
+ *   http://studio.sketchpad.cc/sp/pad/view/ro.vAda$WoLf$6/rev.10
+ * 
+ * authors: 
+ *   Allen W
+ *   
+ *   
+ *   
+
+ * license (unless otherwise specified): 
+ *   creative commons attribution-share alike 3.0 license.
+ *   http://creativecommons.org/licenses/by-sa/3.0/ 
+ */ 
+
+
+
+size(600,600);
+
+var pipe1 = function(x,y,col){
+    fill(col);
+    if(col==="no"){
+        noFill();
+    }
+    noStroke();
+    rect(x,y,200,200);
+    fill(200);
+    stroke(0);
+    strokeWeight(1.5);
+    beginShape();
+    vertex(x+75,y+25);
+    vertex(x+125,y+25);
+    vertex(x+125,y+75);
+    vertex(x+175,y+75);
+    vertex(x+175,y+125);
+    vertex(x+75,y+125);
+    vertex(x+75,y+25);
+    endShape();
+    strokeCap(ROUND);
+    strokeWeight(2.5);
+    rect(x+62.5,y,75,25);
+    rect(x+175,y+62.5,25,75);
+};
+var pipe2 = function(x,y,col){
+    pushMatrix();
+    translate(x+200,y);
+    rotate(PI/2);
+    fill(col);
+    if(col==="no"){
+        noFill();
+    }
+    noStroke();
+    rect(0,0,200,200);
+    fill(200);
+    stroke(0);
+    strokeWeight(1.5);
+    beginShape();
+    vertex(75,25);
+    vertex(125,25);
+    vertex(125,75);
+    vertex(175,75);
+    vertex(175,125);
+    vertex(75,125);
+    vertex(75,25);
+    endShape();
+    strokeCap(ROUND);
+    strokeWeight(2.5);
+    rect(62.5,0,75,25);
+    rect(175,62.5,25,75);
+    popMatrix();
+};
+var pipe3 = function(x,y,col){
+    pushMatrix();
+    translate(x+200,y+200);
+    rotate(PI);
+    fill(col);
+    if(col==="no"){
+        noFill();
+    }
+    noStroke();
+    rect(0,0,200,200);
+    fill(200);
+    stroke(0);
+    strokeWeight(1.5);
+    beginShape();
+    vertex(75,25);
+    vertex(125,25);
+    vertex(125,75);
+    vertex(175,75);
+    vertex(175,125);
+    vertex(75,125);
+    vertex(75,25);
+    endShape();
+    strokeCap(ROUND);
+    strokeWeight(2.5);
+    rect(62.5,0,75,25);
+    rect(175,62.5,25,75);
+    popMatrix();
+};
+var pipe4 = function(x,y,col){
+    pushMatrix();
+    translate(x,y+200);
+    rotate(-PI/2);
+    fill(col);
+    if(col==="no"){
+        noFill();
+    }
+    noStroke();
+    rect(0,0,200,200);
+    fill(200);
+    stroke(0);
+    strokeWeight(1.5);
+    beginShape();
+    vertex(75,25);
+    vertex(125,25);
+    vertex(125,75);
+    vertex(175,75);
+    vertex(175,125);
+    vertex(75,125);
+    vertex(75,25);
+    endShape();
+    strokeCap(ROUND);
+    strokeWeight(2.5);
+    rect(62.5,0,75,25);
+    rect(175,62.5,25,75);
+    popMatrix();
+};
+var pipe5 = function(x,y,col){
+    pushMatrix();
+    translate(x,y);
+    fill(col);
+    if(col==="no"){
+        noFill();
+    }
+    noStroke();
+    rect(0,0,200,200);
+    fill(200);
+    stroke(0);
+    strokeWeight(1.5);
+    beginShape();
+    vertex(125,0);
+    vertex(75,0);
+    vertex(75,200);
+    vertex(125,200);
+    vertex(125,125);
+    vertex(200,125);
+    vertex(200,75);
+    vertex(125,75);
+    vertex(125,0);
+    endShape();
+    strokeCap(ROUND);
+    strokeWeight(2.5);
+    rect(175,62.5,25,75);
+    rect(62.5,0,75,25);
+    rect(62.5,175,75,25);
+    popMatrix();
+};
+var pipe6 = function(x,y,col){
+    pushMatrix();
+    translate(x+200,y);
+    rotate(PI/2);
+    fill(col);
+    if(col==="no"){
+        noFill();
+    }
+    noStroke();
+    rect(0,0,200,200);
+    fill(200);
+    stroke(0);
+    strokeWeight(1.5);
+    beginShape();
+    vertex(125,0);
+    vertex(75,0);
+    vertex(75,200);
+    vertex(125,200);
+    vertex(125,125);
+    vertex(200,125);
+    vertex(200,75);
+    vertex(125,75);
+    vertex(125,0);
+    endShape();
+    strokeCap(ROUND);
+    strokeWeight(2.5);
+    rect(175,62.5,25,75);
+    rect(62.5,0,75,25);
+    rect(62.5,175,75,25);
+    popMatrix();
+};
+var pipe7 = function(x,y,col){
+    pushMatrix();
+    translate(x+200,y+200);
+    rotate(PI);
+    fill(col);
+    if(col==="no"){
+        noFill();
+    }
+    noStroke();
+    rect(0,0,200,200);
+    fill(200);
+    stroke(0);
+    strokeWeight(1.5);
+    beginShape();
+    vertex(125,0);
+    vertex(75,0);
+    vertex(75,200);
+    vertex(125,200);
+    vertex(125,125);
+    vertex(200,125);
+    vertex(200,75);
+    vertex(125,75);
+    vertex(125,0);
+    endShape();
+    strokeCap(ROUND);
+    strokeWeight(2.5);
+    rect(175,62.5,25,75);
+    rect(62.5,0,75,25);
+    rect(62.5,175,75,25);
+    popMatrix();
+};
+var pipe8 = function(x,y,col){
+    pushMatrix();
+    translate(x,y+200);
+    rotate(-PI/2);
+    fill(col);
+    if(col==="no"){
+        noFill();
+    }
+    noStroke();
+    rect(0,0,200,200);
+    fill(200);
+    stroke(0);
+    strokeWeight(1.5);
+    beginShape();
+    vertex(125,0);
+    vertex(75,0);
+    vertex(75,200);
+    vertex(125,200);
+    vertex(125,125);
+    vertex(200,125);
+    vertex(200,75);
+    vertex(125,75);
+    vertex(125,0);
+    endShape();
+    strokeCap(ROUND);
+    strokeWeight(2.5);
+    rect(175,62.5,25,75);
+    rect(62.5,0,75,25);
+    rect(62.5,175,75,25);
+    popMatrix();
+};
+var pipe9 = function(x,y,col){
+    pushMatrix();
+    translate(x,y);
+    fill(col);
+    if(col==="no"){
+        noFill();
+    }
+    noStroke();
+    rect(0,0,200,200);
+    fill(200);
+    stroke(0);
+    strokeWeight(1.5);
+    beginShape();
+    vertex(125,0);
+    vertex(75,0);
+    vertex(75,75);
+    vertex(0,75);
+    vertex(0,125);
+    vertex(75,125);
+    vertex(75,200);
+    vertex(125,200);
+    vertex(125,125);
+    vertex(200,125);
+    vertex(200,75);
+    vertex(125,75);
+    vertex(125,0);
+    endShape();
+    strokeCap(ROUND);
+    strokeWeight(2.5);
+    rect(175,62.5,25,75);
+    rect(0,62.5,25,75);
+    rect(62.5,0,75,25);
+    rect(62.5,175,75,25);
+    popMatrix();
+};
+var pipe10 = function(x,y,col){
+    fill(col);
+    if(col==="no"){
+        noFill();
+    }
+    noStroke();
+    rect(x,y,200,200);
+    fill(200);
+    stroke(0);
+    strokeWeight(1.5);
+    rect(x+75,y,50,200);
+    strokeCap(ROUND);
+    strokeWeight(2.5);
+    rect(x+62.5,y,75,25);
+    rect(x+62.5,y+175,75,25);
+};
+var pipe11 = function(x,y,col){
+    fill(col);
+    if(col==="no"){
+        noFill();
+    }
+    noStroke();
+    rect(x,y,200,200);
+    fill(200);
+    stroke(0);
+    strokeWeight(1.5);
+    rect(x,y+75,200,50);
+    strokeCap(ROUND);
+    strokeWeight(2.5);
+    rect(x,y+62.5,25,75);
+    rect(x+175,y+62.5,25,75);
+};
+/**
+Pipes:
+1:+
+2:+
+3:+
+4:+
+5:¦
+6:-
+7:¦
+8:-
+9:+
+10:||
+11:=
+*/
+//Levs
+
+var lvl=0;
+var levs=[
+    [pipe6,pipe8,pipe2,pipe7,pipe9,pipe6,pipe4,pipe5,pipe7],
+    [pipe2,pipe10,pipe4,pipe3,pipe11,pipe3,pipe1,pipe10,pipe10],
+    [pipe11,pipe4,pipe2,pipe10,pipe11,pipe11,pipe3,pipe4,pipe3],      [pipe6,pipe6,pipe4,pipe11,pipe3,pipe5,pipe2,pipe10,pipe6],
+    [pipe7,pipe10,pipe2,pipe5,pipe1,pipe11,pipe2,pipe7,pipe6],
+    [pipe8,pipe5,pipe2,pipe11,pipe11,pipe11,pipe3,pipe6,pipe5],
+    ];
+var sols = [
+    [pipe5,pipe6,pipe3,pipe5,pipe9,pipe7,pipe1,pipe8,pipe8],
+    [pipe1,pipe11,pipe3,pipe2,pipe11,pipe4,pipe1,pipe11,pipe11],
+    [pipe10,pipe2,pipe3,pipe10,pipe10,pipe10,pipe1,pipe4,pipe1],      [pipe5,pipe6,pipe3,pipe10,pipe1,pipe7,pipe1,pipe11,pipe8],
+    [pipe5,pipe11,pipe3,pipe5,pipe3,pipe10,pipe1,pipe8,pipe8],
+    [pipe5,pipe6,pipe3,pipe10,pipe10,pipe10,pipe1,pipe8,pipe8],       ];
+var rot90=function(lev,pipe){
+        if(levs[lev][pipe]===pipe1){
+            levs[lev][pipe]=pipe2;
+        }
+        else if(levs[lev][pipe]===pipe2){
+            levs[lev][pipe]=pipe3;
+        }
+        else if(levs[lev][pipe]===pipe3){
+            levs[lev][pipe]=pipe4;
+        }
+        else if(levs[lev][pipe]===pipe4){
+            levs[lev][pipe]=pipe1;
+        }
+        else if(levs[lev][pipe]===pipe5){
+            levs[lev][pipe]=pipe6;
+        }
+        else if(levs[lev][pipe]===pipe6){
+            levs[lev][pipe]=pipe7;
+        }
+        else if(levs[lev][pipe]===pipe7){
+            levs[lev][pipe]=pipe8;
+        }
+        else if(levs[lev][pipe]===pipe8){
+            levs[lev][pipe]=pipe5;
+        }
+        else if(levs[lev][pipe]===pipe10){
+            levs[lev][pipe]=pipe11;
+        }
+        else if(levs[lev][pipe]===pipe11){
+            levs[lev][pipe]=pipe10;
+       }
+    };
+//variably stuff
+{
+var games = 0;
+var hi = 0;
+var clicks=0; 
+var tim=0;
+var c1=[0,0];
+var c2=[200,0];
+var c3=[400,0];
+var c4=[0,200];
+var c5=[200,200];
+var c6=[400,200];
+var c7=[0,400];
+var c8=[200,400];
+var c9=[400,400];
+var m=[c1,c2,c3,c4,c5,c6,c7,c8,c9];
+var cols=[color(0,157,255),color(0,157,255),color(0,157,255),color(0,157,255),color(0,157,255),color(0,157,255),color(0,157,255),color(0,157,255),color(0,157,255)];
+var won = false;
+var active = false;
+var h = 0;
+var tut = false;
+var clik=true;
+}
+
+draw = function(){
+    textFont(createFont("calibri"));
+    mouseClicked=function(){
+        if(active&amp;&amp;clik&amp;&amp;!won){
+            clicks++;
+        }
+        
+        if(won&amp;&amp;mouseX&gt;230&amp;&amp;mouseX&lt;370&amp;&amp;mouseY&gt;290&amp;&amp;mouseY&lt;300){
+            lvl=0;
+            clicks=0;
+            active=true;
+            won=false;
+            levs=[
+    [pipe6,pipe8,pipe2,pipe7,pipe9,pipe6,pipe4,pipe5,pipe7],
+    [pipe2,pipe10,pipe4,pipe3,pipe11,pipe3,pipe1,pipe10,pipe10],
+    [pipe11,pipe4,pipe2,pipe10,pipe11,pipe11,pipe3,pipe4,pipe3],      [pipe6,pipe6,pipe4,pipe11,pipe3,pipe5,pipe2,pipe10,pipe6],
+    [pipe7,pipe10,pipe2,pipe5,pipe1,pipe11,pipe2,pipe7,pipe6],
+    [pipe8,pipe5,pipe2,pipe11,pipe11,pipe11,pipe3,pipe6,pipe5],
+    ];
+        }
+        if(!active&amp;&amp;!tut&amp;&amp;h&gt;600&amp;&amp;mouseX&gt;250&amp;&amp;mouseX&lt;350&amp;&amp;mouseY&gt;400&amp;&amp;mouseY&lt;460){
+            tut=true;
+        }
+        if(tut&amp;&amp;!active&amp;&amp;mouseX&gt;250&amp;&amp;mouseX&lt;350&amp;&amp;mouseY&gt;300&amp;&amp;mouseY&lt;350){
+            active=true;
+        }
+        if(clik&amp;&amp;active&amp;&amp;mouseX&gt;0&amp;&amp;mouseX&lt;200&amp;&amp;mouseY&gt;0&amp;&amp;mouseY&lt;200){
+            rot90(lvl,0);
+            
+        }
+        if(clik&amp;&amp;active&amp;&amp;mouseX&gt;200&amp;&amp;mouseX&lt;400&amp;&amp;mouseY&gt;0&amp;&amp;mouseY&lt;200){
+            rot90(lvl,1);
+            
+        }
+        if(clik&amp;&amp;active&amp;&amp;mouseX&gt;400&amp;&amp;mouseX&lt;600&amp;&amp;mouseY&gt;0&amp;&amp;mouseY&lt;200){
+            rot90(lvl,2);
+            
+        }
+        if(clik&amp;&amp;active&amp;&amp;mouseX&gt;0&amp;&amp;mouseX&lt;200&amp;&amp;mouseY&gt;200&amp;&amp;mouseY&lt;400){
+            rot90(lvl,3);
+            
+        }
+        if(clik&amp;&amp;active&amp;&amp;mouseX&gt;200&amp;&amp;mouseX&lt;400&amp;&amp;mouseY&gt;200&amp;&amp;mouseY&lt;400){
+            rot90(lvl,4);
+            
+        }
+        if(clik&amp;&amp;active&amp;&amp;mouseX&gt;400&amp;&amp;mouseX&lt;600&amp;&amp;mouseY&gt;200&amp;&amp;mouseY&lt;400){
+            rot90(lvl,5);
+            
+        }
+        if(clik&amp;&amp;active&amp;&amp;mouseX&gt;0&amp;&amp;mouseX&lt;200&amp;&amp;mouseY&gt;400&amp;&amp;mouseY&lt;600){
+            rot90(lvl,6);
+            
+        }
+        if(clik&amp;&amp;active&amp;&amp;mouseX&gt;200&amp;&amp;mouseX&lt;400&amp;&amp;mouseY&gt;400&amp;&amp;mouseY&lt;600){
+            rot90(lvl,7);
+            
+        }
+        if(clik&amp;&amp;active&amp;&amp;mouseX&gt;400&amp;&amp;mouseX&lt;600&amp;&amp;mouseY&gt;400&amp;&amp;mouseY&lt;600){
+            rot90(lvl,8);
+            
+        }
+        
+    };
+    if(won===false){
+        
+        for(var i = 0; i&lt;9; i++){
+            levs[lvl][i](m[i][0],m[i][1],cols[i]);
+            fill(255);
+            textSize(30);
+            text("Clicks:" + clicks,500,575);
+        }
+        if(!active){
+            if(!tut){
+            for(var i = 0; i&lt;600;i+=10){
+                noStroke();
+                fill(150,i/2,i);
+                rect(0,i,600,10);
+            }
+            pipe2(100,100,"no");
+            pipe11(300,100,"no");
+            pipe11(500,100,"no");
+            noStroke();
+            fill(0,157,255);
+            rect(175,301,50,h+25);
+            h++;
+            stroke(0);
+            var e=random(175,225);
+            var d = random(325,300+h);
+            var di = random(25,300+h-d);
+            line(e,d,e,d+di);
+            if(h&gt;300){
+                var pip=['P','I','P','E','S'];
+                textSize(100);
+                for(var i = 0; i&lt;5; i++){
+                    fill(255-255/5*i);
+                    if(h&gt;300+50*i){
+                    text(pip[i],120*i+34,150);
+                    }
+                d=random(300,600);
+                di=random(25,100);
+                line(e,d,e,d+di);
+            }
+                if(h&gt;600){
+                    for(var i = 0; i&lt;100;i++){
+                        if(mouseX&gt;250&amp;&amp;mouseX&lt;350&amp;&amp;mouseY&gt;400&amp;&amp;mouseY&lt;460){
+                            stroke(2.55*i);
+                            fill(2.55*i);
+                        }
+                        else{
+                            stroke(255-2.55*i);
+                            fill(255-2.55*i);
+                        }
+                        
+                        line(250+i,400,250+i,450);
+                        
+                    }
+                    
+                    textSize(20);
+                    fill(0);
+                    text("P",270,430);
+                    fill(255/3);
+                    text("L",285,430);
+                    fill(255/1.5);
+                    text("A",300,430);
+                    fill(255);
+                    text("Y",315,430);
+                    if(mouseX&gt;250&amp;&amp;mouseX&lt;350&amp;&amp;mouseY&gt;400&amp;&amp;mouseY&lt;450){
+                    fill(255);
+                    text("P",270,430);
+                    fill(255/1.5);
+                    text("L",285,430);
+                    fill(255/3);
+                    text("A",300,430);
+                    fill(0);
+                    text("Y",315,430);
+                    }
+                }
+            }
+            }
+            else if(tut){
+                var howto=["H","O","W"," ","T","O"," ","P","L","A","Y"];
+                for(var i = 600; i&gt;=0; i-=10){
+                    noStroke();
+                    fill(i/3,0,i);
+                    rect(0,i,600,10);
+                }
+                for(var i = 0; i&lt;11;i++){
+                    fill(255-30*i,20*i, 150);
+                    textSize(100);
+                    text(howto[i],i*600/11,100);
+                }
+                fill(255);
+                textSize(25);
+                text("Click on a pipe to rotate it. Your goal is to make a closed path for water to flow through, starting from above the  top left to right of the bottom right.",100,175,400,400);
+                for(var i = 0; i&lt;3; i++){
+                    for(var j = 0; j&lt;3; j++){
+                        noFill();
+                        stroke(50*i,50*j,100);
+                        rect(255+30*i,400+30*j,30,30);
+                    }
+                }
+                rect(260,375,20,25);
+                rect(345,465,25,20);
+                line(270,385,270,395);
+                line(270,395,265,390);
+                line(270,395,275,390);
+                line(350,475,360,475);
+                line(355,480,360,475);
+                line(355,470,360,475);
+                strokeWeight(2.5);
+                stroke(0,250/1.4-100,200);
+                line(250,300,250,350);
+                var start = ['S','t','a','r','t'];
+                for(var i = 250; i&lt;350;i++){
+                        stroke(0,i/1.4-100,200);
+                    
+                    ellipse(i,300,2.5,2.5);
+                    ellipse(i,350,2.5,2.5);
+                    line(350,300,350,350);
+                }
+                for(var i = 0; i&lt;5; i++){
+                    fill(50,i*100-130,200);
+                    text(start[i],260+17.5*i,325);
+                }
+                
+                if(tut&amp;&amp;!active&amp;&amp;mouseX&gt;250&amp;&amp;mouseX&lt;350&amp;&amp;mouseY&gt;300&amp;&amp;mouseY&lt;350){
+                    for(var i = 250; i&lt;350;i++){
+                    stroke(0,i/1.4-100,200);
+                    line(i,300,i,350);
+                }
+                }
+            }
+        }
+        for(var i = 0; i&lt;9; i++){
+            cols[i]=color(0,157,255);
+        }
+        if(clik&amp;&amp;mouseX&gt;0&amp;&amp;mouseX&lt;200&amp;&amp;mouseY&gt;0&amp;&amp;mouseY&lt;200){
+            cols[0]=color(0,207,255);
+            
+        }
+        else if(clik&amp;&amp;mouseX&gt;200&amp;&amp;mouseX&lt;400&amp;&amp;mouseY&gt;0&amp;&amp;mouseY&lt;200){
+            cols[1]=color(0,207,255);
+            
+        }
+        else if(clik&amp;&amp;mouseX&gt;400&amp;&amp;mouseX&lt;600&amp;&amp;mouseY&gt;0&amp;&amp;mouseY&lt;200){
+            cols[2]=color(0,207,255);
+            
+        }
+        else if(clik&amp;&amp;mouseX&gt;0&amp;&amp;mouseX&lt;200&amp;&amp;mouseY&gt;200&amp;&amp;mouseY&lt;400){
+            cols[3]=color(0,207,255);
+            
+        }
+        else if(clik&amp;&amp;mouseX&gt;200&amp;&amp;mouseX&lt;400&amp;&amp;mouseY&gt;200&amp;&amp;mouseY&lt;400){
+            cols[4]=color(0,207,255);
+            
+        }
+        else if(clik&amp;&amp;mouseX&gt;400&amp;&amp;mouseX&lt;600&amp;&amp;mouseY&gt;200&amp;&amp;mouseY&lt;400){
+            cols[5]=color(0,207,255);
+            
+        }
+        else if(clik&amp;&amp;mouseX&gt;0&amp;&amp;mouseX&lt;200&amp;&amp;mouseY&gt;400&amp;&amp;mouseY&lt;600){
+            cols[6]=color(0,207,255);
+            
+        }
+        else if(clik&amp;&amp;mouseX&gt;200&amp;&amp;mouseX&lt;400&amp;&amp;mouseY&gt;400&amp;&amp;mouseY&lt;600){
+            cols[7]=color(0,207,255);
+            
+        }
+        else if(clik&amp;&amp;mouseX&gt;400&amp;&amp;mouseX&lt;600&amp;&amp;mouseY&gt;400&amp;&amp;mouseY&lt;600){
+            cols[8]=color(0,207,255);
+            
+        }
+        
+        
+        
+        {
+            if(levs[lvl][0]===sols[lvl][0]&amp;&amp;levs[lvl][1]===sols[lvl][1]&amp;&amp;levs[lvl][2]===sols[lvl][2]&amp;&amp;levs[lvl][3]===sols[lvl][3]&amp;&amp;levs[lvl][4]===sols[lvl][4]&amp;&amp;levs[lvl][5]===sols[lvl][5]&amp;&amp;levs[lvl][6]===sols[lvl][6]&amp;&amp;levs[lvl][7]===sols[lvl][7]&amp;&amp;levs[lvl][8]===sols[lvl][8]){
+            tim++;
+            clik=false;
+        }
+        }
+        if(tim&gt;50){
+            tim=0;
+            clik=true;
+            lvl++;
+        }
+        if(lvl===levs.length){
+            won=true;
+        }
+    }
+    else if(won===true){
+        if(games===0){
+            hi=clicks;
+            games++;
+        }
+        else if(games&gt;0){
+            if(clicks&lt;hi){
+                hi=clicks;
+                
+            }
+        }
+        var end=["Y","o","u",""," W"," i","n","!"];
+        for(var i = 0; i&lt;9; i++){
+            levs[lvl-1][i](m[i][0],m[i][1],color(0,157,255));
+        }
+        for(var i = 600; i&gt;=0;i-=10){
+                noStroke();
+                fill(255-150,255-i/2,255-i,230);
+                rect(0,i,600,10);
+        }
+        textSize(20);
+        fill(0,255,255);
+        if(won&amp;&amp;mouseX&gt;230&amp;&amp;mouseX&lt;370&amp;&amp;mouseY&gt;290&amp;&amp;mouseY&lt;300){
+            fill(0,200,200);
+        }
+        text("Click to play again",300,300);
+        fill(0,255,255);
+        text("Clicks: "+clicks+"\nHiscore: "+hi, 300,250);
+        textSize(150);
+        
+        textAlign(CENTER);
+        for(var i = 0; i &lt; 8; i++){
+            
+            fill(255/8*i, 255-255/8*i, 200);
+            text(end[i],75*i+50,150);
+        }
+    }
+    
+};
+
+</pre><script src="//studio.sketchpad.cc/static/js/processing-1.4.8.min.js"></script>
+<script src="//studio.sketchpad.cc/static/js/init.js?1"></script>
+<link href="//studio.sketchpad.cc/static/css/embed.css?1" rel="stylesheet" type="text/css" />
+</body>
+</html>
